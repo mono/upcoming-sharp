@@ -1,0 +1,207 @@
+<Type Name="Response" FullName="Mono.Upcoming.Response">
+  <TypeSignature Language="C#" Value="public class Response" />
+  <AssemblyInfo>
+    <AssemblyName>Mono.Upcoming</AssemblyName>
+    <AssemblyVersion>0.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Xml.Serialization.XmlRoot(DataType="", ElementName="rsp", IsNullable=True, Namespace=null)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Response ();" />
+      <MemberType>Constructor</MemberType>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Status">
+      <MemberSignature Language="C#" Value="public Mono.Upcoming.Status Status;" />
+      <MemberType>Field</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute(AttributeName="stat", DataType="", Form=System.Xml.Schema.XmlSchemaForm.None, Namespace=null, Type=null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Mono.Upcoming.Status</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Categories">
+      <MemberSignature Language="C#" Value="public Mono.Upcoming.Category[] Categories;" />
+      <MemberType>Field</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement(DataType="", ElementName="category", Form=System.Xml.Schema.XmlSchemaForm.None, Namespace=null, IsNullable=False, Type=null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Mono.Upcoming.Category[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Countries">
+      <MemberSignature Language="C#" Value="public Mono.Upcoming.Country[] Countries;" />
+      <MemberType>Field</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement(DataType="", ElementName="country", Form=System.Xml.Schema.XmlSchemaForm.None, Namespace=null, IsNullable=False, Type=null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Mono.Upcoming.Country[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Events">
+      <MemberSignature Language="C#" Value="public Mono.Upcoming.Event[] Events;" />
+      <MemberType>Field</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement(DataType="", ElementName="event", Form=System.Xml.Schema.XmlSchemaForm.None, Namespace=null, IsNullable=False, Type=null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Mono.Upcoming.Event[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Groups">
+      <MemberSignature Language="C#" Value="public Mono.Upcoming.Group[] Groups;" />
+      <MemberType>Field</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement(DataType="", ElementName="group", Form=System.Xml.Schema.XmlSchemaForm.None, Namespace=null, IsNullable=False, Type=null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Mono.Upcoming.Group[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Metros">
+      <MemberSignature Language="C#" Value="public Mono.Upcoming.Metro[] Metros;" />
+      <MemberType>Field</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement(DataType="", ElementName="metro", Form=System.Xml.Schema.XmlSchemaForm.None, Namespace=null, IsNullable=False, Type=null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Mono.Upcoming.Metro[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="States">
+      <MemberSignature Language="C#" Value="public Mono.Upcoming.State[] States;" />
+      <MemberType>Field</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement(DataType="", ElementName="state", Form=System.Xml.Schema.XmlSchemaForm.None, Namespace=null, IsNullable=False, Type=null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Mono.Upcoming.State[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Token">
+      <MemberSignature Language="C#" Value="public Mono.Upcoming.Token Token;" />
+      <MemberType>Field</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement(DataType="", ElementName="token", Form=System.Xml.Schema.XmlSchemaForm.None, Namespace=null, IsNullable=False, Type=null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Mono.Upcoming.Token</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Users">
+      <MemberSignature Language="C#" Value="public Mono.Upcoming.User[] Users;" />
+      <MemberType>Field</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement(DataType="", ElementName="user", Form=System.Xml.Schema.XmlSchemaForm.None, Namespace=null, IsNullable=False, Type=null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Mono.Upcoming.User[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Venues">
+      <MemberSignature Language="C#" Value="public Mono.Upcoming.Venue[] Venues;" />
+      <MemberType>Field</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement(DataType="", ElementName="venue", Form=System.Xml.Schema.XmlSchemaForm.None, Namespace=null, IsNullable=False, Type=null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Mono.Upcoming.Venue[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Watches">
+      <MemberSignature Language="C#" Value="public Mono.Upcoming.Watch[] Watches;" />
+      <MemberType>Field</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement(DataType="", ElementName="watchlist", Form=System.Xml.Schema.XmlSchemaForm.None, Namespace=null, IsNullable=False, Type=null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Mono.Upcoming.Watch[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

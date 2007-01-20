@@ -1,0 +1,320 @@
+<Type Name="AuthenticatedConnection" FullName="Mono.Upcoming.AuthenticatedConnection">
+  <TypeSignature Language="C#" Value="public class AuthenticatedConnection : Mono.Upcoming.UpcomingConnection" />
+  <AssemblyInfo>
+    <AssemblyName>Mono.Upcoming</AssemblyName>
+    <AssemblyVersion>0.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Mono.Upcoming.UpcomingConnection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AuthenticatedConnection (string api_key);" />
+      <MemberType>Constructor</MemberType>
+      <Parameters>
+        <Parameter Name="api_key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="api_key">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AuthenticatedConnection (string token, string api_key);" />
+      <MemberType>Constructor</MemberType>
+      <Parameters>
+        <Parameter Name="token" Type="System.String" />
+        <Parameter Name="api_key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="token">To be added.</param>
+        <param name="api_key">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateToken">
+      <MemberSignature Language="C#" Value="public void CreateToken (string frob);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="frob" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="frob">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMetroList">
+      <MemberSignature Language="C#" Value="public Mono.Upcoming.Metro[] GetMetroList ();" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>Mono.Upcoming.Metro[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUserInfo">
+      <MemberSignature Language="C#" Value="public Mono.Upcoming.User GetUserInfo ();" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>Mono.Upcoming.User</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMyGroups">
+      <MemberSignature Language="C#" Value="public Mono.Upcoming.Group[] GetMyGroups ();" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>Mono.Upcoming.Group[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetWatchList">
+      <MemberSignature Language="C#" Value="public Mono.Upcoming.Watch[] GetWatchList ();" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>Mono.Upcoming.Watch[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddEvent">
+      <MemberSignature Language="C#" Value="public Mono.Upcoming.Event AddEvent (string name, Mono.Upcoming.Venue venue, Mono.Upcoming.Category category, DateTime start_date);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>Mono.Upcoming.Event</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="venue" Type="Mono.Upcoming.Venue" />
+        <Parameter Name="category" Type="Mono.Upcoming.Category" />
+        <Parameter Name="start_date" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="name">To be added.</param>
+        <param name="venue">To be added.</param>
+        <param name="category">To be added.</param>
+        <param name="start_date">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddEvent">
+      <MemberSignature Language="C#" Value="public Mono.Upcoming.Event AddEvent (string name, Mono.Upcoming.Venue venue, Mono.Upcoming.Category category, DateTime start_date, string description, Uri url, bool personal, bool selfpromotion);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>Mono.Upcoming.Event</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="venue" Type="Mono.Upcoming.Venue" />
+        <Parameter Name="category" Type="Mono.Upcoming.Category" />
+        <Parameter Name="start_date" Type="System.DateTime" />
+        <Parameter Name="description" Type="System.String" />
+        <Parameter Name="url" Type="System.Uri" />
+        <Parameter Name="personal" Type="System.Boolean" />
+        <Parameter Name="selfpromotion" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="name">To be added.</param>
+        <param name="venue">To be added.</param>
+        <param name="category">To be added.</param>
+        <param name="start_date">To be added.</param>
+        <param name="description">To be added.</param>
+        <param name="url">To be added.</param>
+        <param name="personal">To be added.</param>
+        <param name="selfpromotion">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditEvent">
+      <MemberSignature Language="C#" Value="public Mono.Upcoming.Event EditEvent (Mono.Upcoming.Event event_to_edit);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>Mono.Upcoming.Event</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="event_to_edit" Type="Mono.Upcoming.Event" />
+      </Parameters>
+      <Docs>
+        <param name="event_to_edit">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddTagsToEvent">
+      <MemberSignature Language="C#" Value="public void AddTagsToEvent (Mono.Upcoming.Event event_to_edit, string tags);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="event_to_edit" Type="Mono.Upcoming.Event" />
+        <Parameter Name="tags" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="event_to_edit">To be added.</param>
+        <param name="tags">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveTagFromEvent">
+      <MemberSignature Language="C#" Value="public void RemoveTagFromEvent (Mono.Upcoming.Event event_to_edit, string tag);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="event_to_edit" Type="Mono.Upcoming.Event" />
+        <Parameter Name="tag" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="event_to_edit">To be added.</param>
+        <param name="tag">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddVenue">
+      <MemberSignature Language="C#" Value="public Mono.Upcoming.Venue AddVenue (string venuename, string venueaddress, string venuecity, Mono.Upcoming.Metro metro, string venuezip, string venuephone, Uri venueurl, string venuedescription, bool is_private);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>Mono.Upcoming.Venue</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="venuename" Type="System.String" />
+        <Parameter Name="venueaddress" Type="System.String" />
+        <Parameter Name="venuecity" Type="System.String" />
+        <Parameter Name="metro" Type="Mono.Upcoming.Metro" />
+        <Parameter Name="venuezip" Type="System.String" />
+        <Parameter Name="venuephone" Type="System.String" />
+        <Parameter Name="venueurl" Type="System.Uri" />
+        <Parameter Name="venuedescription" Type="System.String" />
+        <Parameter Name="is_private" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="venuename">To be added.</param>
+        <param name="venueaddress">To be added.</param>
+        <param name="venuecity">To be added.</param>
+        <param name="metro">To be added.</param>
+        <param name="venuezip">To be added.</param>
+        <param name="venuephone">To be added.</param>
+        <param name="venueurl">To be added.</param>
+        <param name="venuedescription">To be added.</param>
+        <param name="is_private">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditVenue">
+      <MemberSignature Language="C#" Value="public void EditVenue (Mono.Upcoming.Venue venue);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="venue" Type="Mono.Upcoming.Venue" />
+      </Parameters>
+      <Docs>
+        <param name="venue">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddEventToWatchList">
+      <MemberSignature Language="C#" Value="public int AddEventToWatchList (Mono.Upcoming.Event event_to_add);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="event_to_add" Type="Mono.Upcoming.Event" />
+      </Parameters>
+      <Docs>
+        <param name="event_to_add">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddEventToWatchList">
+      <MemberSignature Language="C#" Value="public int AddEventToWatchList (Mono.Upcoming.Event event_to_add, Mono.Upcoming.AttendStatus status);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="event_to_add" Type="Mono.Upcoming.Event" />
+        <Parameter Name="status" Type="Mono.Upcoming.AttendStatus" />
+      </Parameters>
+      <Docs>
+        <param name="event_to_add">To be added.</param>
+        <param name="status">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveWatch">
+      <MemberSignature Language="C#" Value="public void RemoveWatch (Mono.Upcoming.Watch watch);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="watch" Type="Mono.Upcoming.Watch" />
+      </Parameters>
+      <Docs>
+        <param name="watch">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Token">
+      <MemberSignature Language="C#" Value="public Mono.Upcoming.Token Token { get; };" />
+      <MemberType>Property</MemberType>
+      <ReturnValue>
+        <ReturnType>Mono.Upcoming.Token</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

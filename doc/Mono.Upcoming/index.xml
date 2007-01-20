@@ -1,0 +1,30 @@
+<Overview>
+  <Assemblies>
+    <Assembly Name="Mono.Upcoming" Version="0.0.0.0" />
+  </Assemblies>
+  <Remarks>To be added.</Remarks>
+  <Copyright>To be added.</Copyright>
+  <Types>
+    <Namespace Name="Mono.Upcoming">
+      <Type Name="AuthenticatedConnection" />
+      <Type Name="UpcomingConnection" />
+      <Type Name="Category" />
+      <Type Name="ConnectionWrapper" />
+      <Type Name="Country" />
+      <Type Name="Event" />
+      <Type Name="Group" />
+      <Type Name="Metro" />
+      <Type Name="Response" />
+      <Type Name="State" />
+      <Type Name="Token" />
+      <Type Name="UpcomingParam" />
+      <Type Name="User" />
+      <Type Name="UpcomingException" />
+      <Type Name="Venue" />
+      <Type Name="Watch" />
+      <Type Name="Status" />
+      <Type Name="AttendStatus" />
+    </Namespace>
+  </Types>
+  <Title>Mono.Upcoming</Title>
+</Overview>

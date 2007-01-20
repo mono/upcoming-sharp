@@ -1,0 +1,8 @@
+prefix=@prefix@
+assemblies_dir=${prefix}/lib/Mono.Upcoming
+Libraries=${assemblies_dir}/Mono.Upcoming.dll
+ 
+Name: Mono.Upcoming
+Description: Mono.Upcoming.dll - 
+Version: 0.1
+Libs: -r:${assemblies_dir}/Mono.Upcoming.dll

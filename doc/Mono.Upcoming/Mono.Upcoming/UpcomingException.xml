@@ -1,0 +1,29 @@
+<Type Name="UpcomingException" FullName="Mono.Upcoming.UpcomingException">
+  <TypeSignature Language="C#" Value="public class UpcomingException : System.Exception" />
+  <AssemblyInfo>
+    <AssemblyName>Mono.Upcoming</AssemblyName>
+    <AssemblyVersion>0.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Exception</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UpcomingException (string msg);" />
+      <MemberType>Constructor</MemberType>
+      <Parameters>
+        <Parameter Name="msg" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="msg">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>
