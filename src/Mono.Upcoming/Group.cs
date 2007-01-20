@@ -2,6 +2,14 @@ using System.Xml.Serialization;
 
 namespace Mono.Upcoming
 {
+	public enum ModerationLevel
+	{
+	 	[XmlEnum ("moderated")]
+		Moderated,
+	 	[XmlEnum ("unmoderated")]
+		Unmoderated 
+	}
+
 	public class Group : ConnectionWrapper
 	{
 		[XmlAttribute ("id")]
@@ -14,7 +22,7 @@ namespace Mono.Upcoming
 		public string Description;
 
 		[XmlAttribute ("moderation_level")]
-		public string ModerationLevel;
+		public ModerationLevel ModerationLevel;
 
 		[XmlAttribute ("is_private")]
 		public int is_private;

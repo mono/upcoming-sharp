@@ -1,0 +1,9 @@
+2007-01-20 Thomas Van Machelen <thomas.vanmachelen@gmail.com>
+	* src/Mono.Upcoming/Category.cs: change ID from string to int
+
+	* src/Mono.Upcoming/Group.cs: use enumeration to define moderation
+	level
+
+	* src/Mono.Upcoming/AuthenticatedConnection.cs: Refactor some of the
+	events code, cover the group api a bit more
+

@@ -5,7 +5,7 @@ namespace Mono.Upcoming
 	public class Category
 	{
 		[XmlAttribute ("id")]
-		public string ID;
+		public int ID;
 
 		[XmlAttribute ("name")]
 		public string Name;

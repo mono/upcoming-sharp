@@ -70,34 +70,15 @@ namespace Mono.Upcoming
 
 		public Event AddEvent (string name, Venue venue, Category category, DateTime start_date)
 		{
-			return AddEvent (name, venue, category, start_date, null, null, false, false);
+			return AddEvent (name, venue, category, start_date, null, false, false);
 		}
 
 		// Fixme: currently no end date support
 		public Event AddEvent (string name, Venue venue, Category category, DateTime start_date, 
-			string description, Uri url, bool personal, bool selfpromotion)
+			string description, bool personal, bool selfpromotion)
 		{
-			System.Collections.ArrayList param_list = new System.Collections.ArrayList ();
-			param_list.Add (new UpcomingParam ("token", Token.TokenString));
-			param_list.Add (new UpcomingParam ("name", name));
-			param_list.Add (new UpcomingParam ("venue_id", venue.ID));
-			param_list.Add (new UpcomingParam ("category_id", category.ID));
-			param_list.Add (new UpcomingParam ("start_date", start_date.ToString ("YYYY-MM-DD")));
-			param_list.Add (new UpcomingParam ("start_time", start_date.ToString ("HH:MM:SS")));
-
-			if (description != null && description != string.Empty)
-				param_list.Add (new UpcomingParam ("description", description));
-
-			if (url != null)
-				param_list.Add (new UpcomingParam ("url", url.ToString ()));
-
-			if (personal)
-				param_list.Add (new UpcomingParam ("personal", 1));
-
-			if (selfpromotion)
-				param_list.Add (new UpcomingParam ("selfpromotion", 1));
-
-			UpcomingParam[] param_array = (UpcomingParam[]) param_list.ToArray (typeof (UpcomingParam));
+			UpcomingParam[] param_array = GetEventParams (name, description, venue.ID, category.ID, start_date, 
+				personal, selfpromotion);
 
 			Response rsp = Util.Post ("event.add", param_array);
 
@@ -109,28 +90,35 @@ namespace Mono.Upcoming
 			if (event_to_edit.UserID != Token.UserId)
 				throw new UpcomingException ("User Id must match Owner Id to be able to edit events");
 
-			System.Collections.ArrayList param_list = new System.Collections.ArrayList ();
-			param_list.Add (new UpcomingParam ("token", Token.TokenString));
-			param_list.Add (new UpcomingParam ("name", event_to_edit.Name));
-			param_list.Add (new UpcomingParam ("venue_id", event_to_edit.VenueID));
-			param_list.Add (new UpcomingParam ("category_id", event_to_edit.CategoryID));
-			param_list.Add (new UpcomingParam ("start_date", event_to_edit.StartDate.ToString ("YYYY-MM-DD")));
-			param_list.Add (new UpcomingParam ("start_time", event_to_edit.StartDate.ToString ("HH:MM:SS")));
-
-			if (event_to_edit.Description != null && event_to_edit.Description != string.Empty)
-				param_list.Add (new UpcomingParam ("description", event_to_edit.Description));
-
-			if (event_to_edit.Personal)
-				param_list.Add (new UpcomingParam ("personal", 1));
-
-			if (event_to_edit.SelfPromotion)
-				param_list.Add (new UpcomingParam ("selfpromotion", 1));
-
-			UpcomingParam[] param_array = (UpcomingParam[])param_list.ToArray (typeof (UpcomingParam));
+			UpcomingParam[] param_array = GetEventParams (event_to_edit.Name, event_to_edit.Description, event_to_edit.VenueID, 
+				event_to_edit.CategoryID, event_to_edit.StartDate, event_to_edit.Personal, event_to_edit.SelfPromotion);
 
 			Response rsp = Util.Post ("event.edit", param_array);
 
 			return rsp.Events[0];
+		}
+
+		private UpcomingParam[] GetEventParams (string name, string description, int venue_id, int category_id, DateTime start_date, 
+			bool personal, bool self_promotion)
+		{
+		 	System.Collections.ArrayList param_list = new System.Collections.ArrayList ();
+			param_list.Add (new UpcomingParam ("token", Token.TokenString));
+			param_list.Add (new UpcomingParam ("name", name));
+			param_list.Add (new UpcomingParam ("venue_id", venue_id));
+			param_list.Add (new UpcomingParam ("category_id", category_id));
+			param_list.Add (new UpcomingParam ("start_date", start_date.ToString ("YYYY-MM-DD")));
+			param_list.Add (new UpcomingParam ("start_time", start_date.ToString ("HH:MM:SS")));
+
+			if (description != null && description != string.Empty)
+				param_list.Add (new UpcomingParam ("description", description));
+
+			if (personal)
+				param_list.Add (new UpcomingParam ("personal", 1));
+
+			if (self_promotion)
+				param_list.Add (new UpcomingParam ("selfpromotion", 1));
+
+			return (UpcomingParam[]) param_list.ToArray (typeof (UpcomingParam));
 		}
 
 		public void AddTagsToEvent (Event event_to_edit, string tags)
@@ -145,6 +133,61 @@ namespace Mono.Upcoming
 			Util.Post ("event.removeTag", new UpcomingParam ("token", Token.TokenString),
 				new UpcomingParam ("event_id", event_to_edit.ID),
 				new UpcomingParam ("tag", tag));
+		}
+
+		public Group AddGroup (string name, string description, ModerationLevel moderation_level, bool is_private)
+		{
+			UpcomingParam[] param_array = GetGroupParams (name, description, moderation_level, is_private);
+
+			Response rsp = Util.Post ("group.add", param_array);
+
+			return rsp.Groups [0];
+		}
+
+		public Group EditGroup (Group group)
+		{
+			if (group.OwnerUserId != Token.UserId)
+				throw new UpcomingException ("User Id must match Owner Id to be able to edit group.");
+
+			UpcomingParam[] param_array = GetGroupParams (group.Name, group.Description, group.ModerationLevel, group.IsPrivate);
+		 
+		 	Response rsp = Util.Post ("group.edit", param_array);
+
+			return rsp.Groups [0];
+		}
+
+		public void JoinGroup (Group group)
+		{
+			Util.Post ("group.join", new UpcomingParam ("token", Token.TokenString), new UpcomingParam ("group_id", group.ID));
+		}
+
+		public void LeaveGroup (Group group)
+		{
+			Util.Post ("group.leave", new UpcomingParam ("token", Token.TokenString), new UpcomingParam ("group_id", group.ID));
+		}
+
+		public void AddEventToGroup (Event event_to_add, Group group)
+		{
+			Util.Post ("group.addEventTo", new UpcomingParam ("token", Token.TokenString), new UpcomingParam ("event_id", event_to_add.ID),
+				new UpcomingParam ("group_id", group.ID));
+		}
+
+		public UpcomingParam[] GetGroupParams (string name, string description, ModerationLevel moderation_level, bool is_private)
+		{
+		 	System.Collections.ArrayList param_list = new System.Collections.ArrayList ();
+			param_list.Add (new UpcomingParam ("token", Token.TokenString));
+			param_list.Add (new UpcomingParam ("name", name));
+
+			if (description != null && description != string.Empty)
+			 	param_list.Add (new UpcomingParam ("description", description));
+
+			if (moderation_level == ModerationLevel.Moderated)
+			 	param_list.Add (new UpcomingParam ("moderation_level", moderation_level));
+
+			if (is_private)
+			 	param_list.Add (new UpcomingParam ("is_private", 1));
+
+			return (UpcomingParam[]) param_list.ToArray (typeof (UpcomingParam));
 		}
 
 
