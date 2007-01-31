@@ -1,3 +1,8 @@
+2007-01-32 Thomas Van Machelen <thomas.vanmachelen@gmail.com>
+	* src/Mono.Upcoming/Event.cs:
+	* src/Mono.Upcoming/Group.cs:
+	* src/Mono.Upcoming/Venue.cs: remove some unnecessary code
+
 2007-01-20 Thomas Van Machelen <thomas.vanmachelen@gmail.com>
 	* src/Mono.Upcoming/Category.cs: change ID from string to int
 

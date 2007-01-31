@@ -28,7 +28,7 @@ namespace Mono.Upcoming
 		public int is_private;
 
 		public bool IsPrivate {
-			get { return is_private == 1 ? true : false; }
+			get { return is_private == 1; }
 		}
 
 		[XmlAttribute ("timestamp")]

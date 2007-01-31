@@ -48,7 +48,7 @@ namespace Mono.Upcoming
 
 		[XmlIgnore ()]
 		public bool IsPrivate {
-			get { return is_private == 1 ? true : false; }
+			get { return is_private == 1; }
 		}
 
 		[XmlAttribute ("metro_id")]
@@ -92,7 +92,7 @@ namespace Mono.Upcoming
 
 		[XmlIgnore ()]
 		public bool IsGeocodingAmbiguous {
-			get { return is_geocoding_ambiguous == "1" ? true : false; }
+			get { return is_geocoding_ambiguous == "1"; }
 		}
 
 	}

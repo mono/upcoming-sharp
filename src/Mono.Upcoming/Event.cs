@@ -57,14 +57,14 @@ namespace Mono.Upcoming
 		public int personal;
 
 		public bool Personal {
-			get { return personal == 1 ? true : false; }
+			get { return personal == 1; }
 		}
 
 		[XmlAttribute ("self_promotion")]
 		public int self_promotion;
 
 		public bool SelfPromotion {
-			get { return self_promotion == 1 ? true : false; }
+			get { return self_promotion == 1; }
 		}
 
 		[XmlAttribute ("metro_id")]
