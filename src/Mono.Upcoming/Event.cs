@@ -23,8 +23,7 @@ namespace Mono.Upcoming
 		public System.DateTime StartDate
 		{
 			get {
-				try
-				{
+				try {
 					return System.DateTime.Parse (start_date);
 				}
 				catch
@@ -42,8 +41,7 @@ namespace Mono.Upcoming
 		{
 			get
 			{
-				try
-				{
+				try {
 					return System.DateTime.Parse (end_date);
 				}
 				catch
@@ -118,10 +116,7 @@ namespace Mono.Upcoming
 
 		public bool GeocodingAmbiguous {
 			get {
-				if (geocoding_ambiguous == "1")
-					return true;
-				else
-					return false;
+				return geocoding_ambiguous == "1";
 			}
 		}
 

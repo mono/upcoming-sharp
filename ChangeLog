@@ -1,4 +1,7 @@
-2007-01-32 Thomas Van Machelen <thomas.vanmachelen@gmail.com>
+2007-02-06 Thomas Van Machelen <thomas.vanmachelen@gmail.com>
+	* src/Mono.Upcoming/Event.cs: more cleanup
+
+2007-01-31 Thomas Van Machelen <thomas.vanmachelen@gmail.com>
 	* src/Mono.Upcoming/Event.cs:
 	* src/Mono.Upcoming/Group.cs:
 	* src/Mono.Upcoming/Venue.cs: remove some unnecessary code
